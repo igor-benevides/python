@@ -969,3 +969,8 @@ class Libvmi(object):
     def slat_change_gfn(self, slat_idx, old_gfn, new_gfn):
         status = lib.vmi_slat_change_gfn(self.vmi, slat_idx, old_gfn, new_gfn)
         check(status)
+
+    def set_mem_event(self, gfn,  access, pgn_ksm):
+        #set_mem_event(vmi, i>>12, VMI_MEMACCESS_W, 0)
+        status = lib.vmi_set_mem_event(self.vmi, gfn, access, pgn_ksm)
+        check(status)

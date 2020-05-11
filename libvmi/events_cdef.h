@@ -179,6 +179,12 @@ status_t vmi_register_event(
     vmi_instance_t vmi,
     vmi_event_t *event);
 
+status_t vmi_set_mem_event(
+    vmi_instance_t vmi,
+    addr_t gfn,
+    vmi_mem_access_t access,
+    uint16_t slat_id);
+
 status_t vmi_events_listen(
     vmi_instance_t vmi,
     uint32_t timeout);
