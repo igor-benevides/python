@@ -209,6 +209,7 @@ class PageInfo(object):
         self.dtb = cffi_pageinfo.dtb
         self.paddr = cffi_pageinfo.paddr
         self.size = cffi_pageinfo.size
+        self.x86_ia32e = cffi_pageinfo.x86_ia32e
         # TODO page mode
 
 
